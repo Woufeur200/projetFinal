@@ -7,3 +7,12 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.xaml
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\App.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.xbf
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjetFinal.csprojAssemblyReference.cache
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\App.g.i.cs
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\App.g.cs
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.g.cs
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\App.xaml
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.xaml
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\App.xbf
+C:\Users\1923766\Source\Repos\projetFinal3\ProjetFinal\ProjetFinal\obj\x86\Debug\MainPage.xbf
