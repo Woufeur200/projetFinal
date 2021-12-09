@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="ProjetFinal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+        <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
+            <AppBarButton x:ConnectionId='2' Icon="Add" x:Name="btAdd" Label="Ajouter"                     />
+            <AppBarButton x:ConnectionId='3' Icon="Remove" x:Name="btRemove" Label="Supprimer"                        />
+            <AppBarButton x:ConnectionId='4' Icon="Save" x:Name="btSave" Label="Enregistrer"                      />
+
+            <CommandBar.Content >
+                <AppBarButton x:ConnectionId='5' Icon="Back" x:Name="btBack"                      />
+            </CommandBar.Content>
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="People" Label="Clients"/>
+                <AppBarButton Icon="Print" Label="Materiels"/>
+                <AppBarButton Icon="Accept" Label="Prets"/>
+                <AppBarButton Icon="ContactInfo" Label="Utilisateurs"/>
+            </CommandBar.SecondaryCommands>
+
+        </CommandBar>
+
+    </Grid>
+</Page>
+

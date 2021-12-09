@@ -26,5 +26,30 @@ namespace ProjetFinal
         {
             this.InitializeComponent();
         }
+
+        private void btAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btRemove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btForward_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -16,13 +16,21 @@
 
         </Grid.RowDefinitions>
         <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
-            <AppBarButton Icon="Add" x:Name="bt1" Label="Ajouter" Click="bt1_Click" />
-            <AppBarButton Icon="Remove" x:Name="bt2" Label="Supprimer" Click="bt2_Click" />
-            <AppBarButton Icon="Save" x:Name="bt3" Label="Enregistrer" Click="bt3_Click" />
+            <AppBarButton Icon="Add" x:Name="btAdd" Label="Ajouter" Click="btAdd_Click" />
+            <AppBarButton Icon="Remove" x:Name="btRemove" Label="Supprimer" Click="btRemove_Click" />
+            <AppBarButton Icon="Save" x:Name="btSave" Label="Enregistrer" Click="btSave_Click" />
 
-            <CommandBar.Content DefaultLabelPosition="Right">
-                <AppBarButton Icon="Back" x:Name="bt4" Label="Back" Click="bt4_Click"/>
+            <CommandBar.Content >
+                <AppBarButton Icon="Back" x:Name="btBack"  Click="btBack_Click"/>
             </CommandBar.Content>
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="People" Label="Clients"/>
+                <AppBarButton Icon="Print" Label="Materiels"/>
+                <AppBarButton Icon="AllApps" Label="Prets"/>
+                <AppBarButton Icon="ContactInfo" Label="Utilisateurs"/>
+            </CommandBar.SecondaryCommands>
+
         </CommandBar>
 
     </Grid>
