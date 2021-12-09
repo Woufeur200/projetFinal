@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
 
     <Grid Background="LightGray">
         <Grid.RowDefinitions>
@@ -27,7 +28,7 @@
             <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="People" Label="Clients"/>
                 <AppBarButton Icon="Print" Label="Materiels"/>
-                <AppBarButton Icon="Accept" Label="Prets"/>
+                <AppBarButton Icon="AllApps" Label="Prets"/>
                 <AppBarButton Icon="ContactInfo" Label="Utilisateurs"/>
             </CommandBar.SecondaryCommands>
 
