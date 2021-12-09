@@ -31,6 +31,6 @@
                 <AppBarButton Icon="ContactInfo" x:Name="btUtilisateur" Label="Utilisateurs" Click="btUtilisateur_Click"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-        <Frame x:Name="mainFrame"/>
+        <Frame x:Name="mainFrame" Grid.Row="1"/>
     </Grid>
 </Page>

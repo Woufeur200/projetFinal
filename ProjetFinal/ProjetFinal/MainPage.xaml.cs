@@ -59,7 +59,7 @@ namespace ProjetFinal
 
         private void btClient_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(typeof(ClientPage));
         }
 
         private void btMateriel_Click(object sender, RoutedEventArgs e)
