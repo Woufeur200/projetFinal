@@ -119,10 +119,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="DetailsPret.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Materiel.cs" />
+    <Compile Include="Pret.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilisateur.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
