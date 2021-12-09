@@ -8,7 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+        <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
+            <AppBarButton Icon="Add" x:Name="bt1" Label="Ajouter" Click="bt1_Click" />
+            <AppBarButton Icon="Remove" x:Name="bt2" Label="Supprimer" Click="bt2_Click" />
+            <AppBarButton Icon="Save" x:Name="bt3" Label="Enregistrer" Click="bt3_Click" />
+
+            <CommandBar.Content DefaultLabelPosition="Right">
+                <AppBarButton Icon="Back" x:Name="bt4" Label="Back" Click="bt4_Click"/>
+            </CommandBar.Content>
+        </CommandBar>
 
     </Grid>
 </Page>
