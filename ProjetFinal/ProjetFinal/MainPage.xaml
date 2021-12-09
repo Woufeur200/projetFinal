@@ -14,7 +14,6 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
-
         </Grid.RowDefinitions>
         <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
             <AppBarButton Icon="Add" x:Name="btAdd" Label="Ajouter" Click="btAdd_Click" />
@@ -26,13 +25,12 @@
             </CommandBar.Content>
 
             <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="People" Label="Clients"/>
-                <AppBarButton Icon="Print" Label="Materiels"/>
-                <AppBarButton Icon="AllApps" Label="Prets"/>
-                <AppBarButton Icon="ContactInfo" Label="Utilisateurs"/>
+                <AppBarButton Icon="People" x:Name="btClient" Label="Clients" Click="btClient_Click"/>
+                <AppBarButton Icon="Print" x:Name="btMateriel" Label="Materiels" Click="btMateriel_Click"/>
+                <AppBarButton Icon="AllApps" x:Name="btPret" Label="Prets" Click="btPret_Click"/>
+                <AppBarButton Icon="ContactInfo" x:Name="btUtilisateur" Label="Utilisateurs" Click="btUtilisateur_Click"/>
             </CommandBar.SecondaryCommands>
-
         </CommandBar>
-
+        <Frame x:Name="mainFrame"/>
     </Grid>
 </Page>

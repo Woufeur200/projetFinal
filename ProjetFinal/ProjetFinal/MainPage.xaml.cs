@@ -51,5 +51,30 @@ namespace ProjetFinal
         {
 
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btClient_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btMateriel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btPret_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btUtilisateur_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
