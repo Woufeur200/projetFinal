@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>1806F186493665492655C4854A2B10150087B9276203E8FCC18E8432103C4D5F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9433425D890691A129335E478B5368B2F0DF055689378D0358FEC6EC9D4E2DB5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c27fef7b-19ba-4103-ae75-9aa7bd3f4f7d_1.0.0.0_x86__gkx4qx1bgg8j8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c27fef7b-19ba-4103-ae75-9aa7bd3f4f7d_gkx4qx1bgg8j8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c27fef7b-19ba-4103-ae75-9aa7bd3f4f7d</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-09T19:32:42.183</Modified>
+      <Modified>2021-12-09T19:36:53.901</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
       <PackagePath>entrypoint\ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-09T19:32:41.430</Modified>
+      <Modified>2021-12-09T19:36:52.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\bouncycastle.netcore\1.8.5\lib\netstandard2.0\BouncyCastle.Crypto.dll">
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
@@ -94,9 +94,9 @@
       <PackagePath>System.Security.Permissions.dll</PackagePath>
       <Modified>2019-11-15T08:37:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T08:52:00.000</Modified>
+      <Modified>2019-03-18T22:36:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
@@ -142,31 +142,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
       <PackagePath>ProjetFinal.xr.xml</PackagePath>
-      <Modified>2021-12-09T19:32:41.369</Modified>
+      <Modified>2021-12-09T19:36:52.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-09T19:27:48.533</Modified>
+      <Modified>2021-12-09T19:36:52.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-09T19:32:41.378</Modified>
+      <Modified>2021-12-09T19:36:52.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2020-12-02T08:59:30.000</Modified>
+      <Modified>2019-03-18T22:43:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T06:52:06.000</Modified>
+      <Modified>2019-03-18T21:33:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-09T19:27:49.326</Modified>
+      <Modified>2021-12-09T19:36:52.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
       <PackagePath>ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-09T19:32:42.179</Modified>
+      <Modified>2021-12-09T19:36:53.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
