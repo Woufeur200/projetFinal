@@ -14,10 +14,14 @@ namespace ProjetFinal
         static GestionBD gestionBD = null;
         ObservableCollection<Client> listeC = new ObservableCollection<Client>();
         ObservableCollection<Utilisateur> listeU = new ObservableCollection<Utilisateur>();
+        internal int connexion;
+        string usernameLogged;
+        int logged;
+        int idUser;
 
         public GestionBD()
         {
-            this.con = new MySqlConnection("Server=localhost;Database=bd;Uid=root;Pwd=;"); ;
+            this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;"); ;
         }
 
         public static GestionBD getInstance()
@@ -27,6 +31,59 @@ namespace ProjetFinal
 
             return gestionBD;
         }
+        /* Login */
+        public int login(string username, string password)
+        {
+            int check = 0;
+            string nom = "";
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "Select * from utilisateur WHERE username = @username AND password = @password";
+            commande.Parameters.AddWithValue("@username", username);
+            commande.Parameters.AddWithValue("@password", password);
+            con.Open();
+            commande.Prepare();
+
+
+
+            MySqlDataReader r = commande.ExecuteReader();
+            while (r.Read())
+            {
+                check = 1;
+                nom = r.GetString(3);
+                idUser = r.GetInt32(0);
+            }
+            r.Close();
+            con.Close();
+            if (check == 1)
+            {
+                logged = 1;
+                usernameLogged = nom;
+                return check;
+            }
+            else
+            {
+                logged = 0;
+                usernameLogged = "";
+                return check;
+            }
+
+
+
+        }
+
+
+
+        public int logout()
+        {
+            logged = 0;
+            usernameLogged = "";
+            idUser = 0;
+            return logged;
+        }
+
+
+
         /* client */
         public ObservableCollection<Client> getClients()
         {

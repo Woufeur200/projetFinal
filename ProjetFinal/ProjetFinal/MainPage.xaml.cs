@@ -47,16 +47,6 @@ namespace ProjetFinal
 
         }
 
-        private void btForward_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btClient_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(typeof(ClientPage));
@@ -64,15 +54,20 @@ namespace ProjetFinal
 
         private void btMateriel_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(typeof(MaterielPage));
         }
 
         private void btPret_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(typeof(PretPage));
         }
 
         private void btUtilisateur_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(UtilisateurPage));
+        }
+
+        private void btLogout_Click(object sender, RoutedEventArgs e)
         {
 
         }

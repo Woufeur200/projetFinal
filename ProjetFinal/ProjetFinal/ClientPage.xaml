@@ -10,6 +10,6 @@
     RequestedTheme="Light">
 
     <Grid>
-        <TextBlock Text="TEST" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80"></TextBlock>
+        <TextBlock Text="Client" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80"></TextBlock>
     </Grid>
 </Page>

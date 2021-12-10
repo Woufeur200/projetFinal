@@ -129,9 +129,21 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Materiel.cs" />
+    <Compile Include="MaterielPage.xaml.cs">
+      <DependentUpon>MaterielPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageConnexion.xaml.cs">
+      <DependentUpon>PageConnexion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pret.cs" />
+    <Compile Include="PretPage.xaml.cs">
+      <DependentUpon>PretPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilisateur.cs" />
+    <Compile Include="UtilisateurPage.xaml.cs">
+      <DependentUpon>UtilisateurPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -160,6 +172,22 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MaterielPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageConnexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PretPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UtilisateurPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
