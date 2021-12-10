@@ -44,6 +44,10 @@ namespace ProjetFinal
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
+            if (mainFrame.CanGoBack)
+            {
+                mainFrame.GoBack();
+            }
 
         }
 
@@ -69,7 +73,8 @@ namespace ProjetFinal
 
         private void btLogout_Click(object sender, RoutedEventArgs e)
         {
-
+            GestionBD.getInstance().logout();
+            Frame.Navigate(typeof(PageConnexion));
         }
     }
 }

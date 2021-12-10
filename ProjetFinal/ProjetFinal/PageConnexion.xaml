@@ -6,27 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center"
-VerticalAlignment="Center">
-
-
-            <TextBlock Text="Bienvenue"
-FontSize="40"
-Margin="15"/>
-            <TextBox x:Name="txtUserName"
-Header="Nom d'usager"
-Margin="0,0,0,10"/>
-            <PasswordBox x:Name="pwdPassword"
-Header="Mot de passe"/>
-            <Button x:Name="btnConnexion"
-Content="Connexion"
-HorizontalAlignment="Center"
-CornerRadius="10"
-Background="DeepSkyBlue"
-Margin="20" Click="btnConnexion_Click"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Connexion" FontSize="40" Margin="15"/>
+            <TextBox x:Name="txtUserName" Header="Nom d'usager" Margin="0,0,0,10"/>
+            <PasswordBox x:Name="pwdPassword" Header="Mot de passe"/>
+            <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Center" CornerRadius="10" Background="LightGray" Margin="20" Click="btnConnexion_Click"/>
         </StackPanel>
     </Grid>
 </Page>
