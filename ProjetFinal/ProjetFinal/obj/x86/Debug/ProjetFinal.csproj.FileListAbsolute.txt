@@ -91,3 +91,4 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PageConnexion.g.cs
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PageConnexion.xaml
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PageConnexion.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjetFinal.csproj.AssemblyReference.cache

@@ -20,8 +20,8 @@
             <AppBarButton x:ConnectionId='4' Icon="Remove" x:Name="btRemove" Label="Supprimer"                        />
             <AppBarButton x:ConnectionId='5' Icon="Save" x:Name="btSave" Label="Enregistrer"                      />
             <AppBarButton x:ConnectionId='6' Icon="ClosePane" x:Name="btLogout"                        />
-
-            <CommandBar.Content >
+            
+            <CommandBar.Content>
                 <AppBarButton x:ConnectionId='7' Icon="Back" x:Name="btBack"                      />
             </CommandBar.Content>
 
