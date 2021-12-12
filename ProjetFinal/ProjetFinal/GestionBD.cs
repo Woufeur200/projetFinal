@@ -14,6 +14,8 @@ namespace ProjetFinal
         static GestionBD gestionBD = null;
         ObservableCollection<Client> listeC = new ObservableCollection<Client>();
         ObservableCollection<Utilisateur> listeU = new ObservableCollection<Utilisateur>();
+        ObservableCollection<Materiel> listeM = new ObservableCollection<Materiel>();
+
         //internal int connexion;
         string usernameLogged;
         int logged;
@@ -88,7 +90,6 @@ namespace ProjetFinal
         /* client */
         public ObservableCollection<Client> getClients()
         {
-            //ObservableCollection<Client> liste = new ObservableCollection<Client>();
             listeC.Clear();
 
             MySqlCommand commande = new MySqlCommand();
@@ -209,8 +210,7 @@ namespace ProjetFinal
 
         public ObservableCollection<Utilisateur> getUtilisateur()
         {
-            ObservableCollection<Utilisateur> listeU = new ObservableCollection<Utilisateur>();
-
+            listeU.Clear();
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
             commande.CommandText = "Select * from utilisateur";
@@ -229,7 +229,10 @@ namespace ProjetFinal
             return listeU;
         }
 
-
+        public ObservableCollection<Utilisateur> getListeUtilisateurs()
+        {
+            return listeU;
+        }
 
         public int ajouterUsager(Utilisateur c)
         {
@@ -296,6 +299,116 @@ namespace ProjetFinal
                 con.Close();
 
                 listeU.Remove(o);
+
+                return retour;
+            }
+            catch (MySqlException ex)
+            {
+                retour = 0;
+
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
+
+            return retour;
+
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /*Materiel*/
+        public ObservableCollection<Materiel> getMateriels()
+        {
+            listeM.Clear();
+
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "Select * from materiel";
+
+            con.Open();
+            MySqlDataReader r = commande.ExecuteReader();
+
+            while (r.Read())
+            {
+
+                listeM.Add(new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+            }
+            r.Close();
+            con.Close();
+
+            return listeM;
+        }
+
+        public ObservableCollection<Materiel> getListeMateriels()
+        {
+            return listeM;
+        }
+
+        public int ajouterMateriel(Materiel m)
+        {
+            int retour = 0;
+
+            MySqlCommand commande = new MySqlCommand("p_add_materiel");
+            commande.Connection = con;
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+            commande.Parameters.AddWithValue("@idMat", m.IdMat);
+            commande.Parameters.AddWithValue("@brand", m.Brand);
+            commande.Parameters.AddWithValue("@model", m.Model);
+            commande.Parameters.AddWithValue("@state", m.State);
+            commande.Parameters.AddWithValue("@note", m.Note);
+
+            con.Open();
+            commande.Prepare();
+            retour = commande.ExecuteNonQuery();
+
+            con.Close();
+
+            return retour;
+        }
+
+
+
+        public int modifierMateriel(Materiel m)
+        {
+            int retour = 0;
+
+            MySqlCommand commande = new MySqlCommand("p_modify_materiel");
+            commande.Connection = con;
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            commande.Parameters.AddWithValue("@idMat", m.IdMat);
+            commande.Parameters.AddWithValue("@brand", m.Brand);
+            commande.Parameters.AddWithValue("@model", m.Model);
+            commande.Parameters.AddWithValue("@state", m.State);
+            commande.Parameters.AddWithValue("@note", m.Note);
+
+            con.Open();
+            commande.Prepare();
+            retour = commande.ExecuteNonQuery();
+
+            con.Close();
+
+            return retour;
+        }
+
+        public int deleteMateriel(Materiel m)
+        {
+            int retour = 0;
+
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "delete from materiel where idMat = @idMat";
+
+                commande.Parameters.AddWithValue("@idClient", m.IdMat);
+
+                con.Open();
+                commande.Prepare();
+                retour = commande.ExecuteNonQuery();
+                con.Close();
+
+                listeM.Remove(m);
 
                 return retour;
             }

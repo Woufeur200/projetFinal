@@ -8,6 +8,11 @@
     <RootPropertyPathName Name="Email" />
     <RootPropertyPathName Name="ClientName" />
     <RootPropertyPathName Name="IdClient" />
+    <RootPropertyPathName Name="Note" />
+    <RootPropertyPathName Name="State" />
+    <RootPropertyPathName Name="Model" />
+    <RootPropertyPathName Name="Brand" />
+    <RootPropertyPathName Name="IdMat" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -52,18 +57,18 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ProjetFinal.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="ProjetFinal.MaterielPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Header" />

@@ -25,6 +25,13 @@ namespace ProjetFinal
         public MaterielPage()
         {
             this.InitializeComponent();
+            GestionBD.getInstance().getMateriels();
+            myTableau.ItemsSource = GestionBD.getInstance().getListeMateriels();
+        }
+
+        private void myTableau_CellEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridCellEditEndedEventArgs e)
+        {
+
         }
     }
 }
