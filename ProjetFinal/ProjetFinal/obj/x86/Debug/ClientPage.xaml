@@ -4,13 +4,45 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Light">
 
     <Grid>
-        <TextBlock Text="Client" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80"></TextBlock>
+        <controls:DataGrid x:ConnectionId='2' x:Name="myTableau" AutoGenerateColumns="False"                                           >
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Header="ID Client"
+                    Binding="{Binding IdClient}"
+                    Width="200"/>
+
+                <controls:DataGridTextColumn
+                    Header="Nom"
+                    Binding="{Binding ClientName}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="E-mail"
+                    Binding="{Binding Email}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Téléphone"
+                    Binding="{Binding Phone}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Poste"
+                    Binding="{Binding Poste}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Numero de Bureau"
+                    Binding="{Binding DeskNumber}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Type"
+                    Binding="{Binding Type}"
+                    Width="200"/>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
     </Grid>
 </Page>
 

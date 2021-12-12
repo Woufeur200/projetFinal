@@ -14,14 +14,15 @@ namespace ProjetFinal
         static GestionBD gestionBD = null;
         ObservableCollection<Client> listeC = new ObservableCollection<Client>();
         ObservableCollection<Utilisateur> listeU = new ObservableCollection<Utilisateur>();
-        internal int connexion;
+        //internal int connexion;
         string usernameLogged;
         int logged;
         int idUser;
 
         public GestionBD()
         {
-            this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;"); ;
+            // this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;");
+            this.con = new MySqlConnection("Server = localhost; Database = prog; Uid = root; Pwd = root;");
         }
 
         public static GestionBD getInstance()
@@ -87,7 +88,8 @@ namespace ProjetFinal
         /* client */
         public ObservableCollection<Client> getClients()
         {
-            ObservableCollection<Client> liste = new ObservableCollection<Client>();
+            //ObservableCollection<Client> liste = new ObservableCollection<Client>();
+            listeC.Clear();
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
@@ -99,7 +101,7 @@ namespace ProjetFinal
             while (r.Read())
             {
 
-                liste.Add(new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetString(6)));
+                listeC.Add(new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetString(6)));
             }
             r.Close();
             con.Close();
@@ -107,7 +109,10 @@ namespace ProjetFinal
             return listeC;
         }
 
-
+        public ObservableCollection<Client> getListeClients()
+        {
+            return listeC;
+        }
 
         public int ajouterClient(Client c)
         {
