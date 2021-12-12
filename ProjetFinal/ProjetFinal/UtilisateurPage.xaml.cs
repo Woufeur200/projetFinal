@@ -25,6 +25,13 @@ namespace ProjetFinal
         public UtilisateurPage()
         {
             this.InitializeComponent();
+            GestionBD.getInstance().getUtilisateur();
+            myTableau.ItemsSource = GestionBD.getInstance().getListeUtilisateurs();
+        }
+
+        private void myTableau_CellEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridCellEditEndedEventArgs e)
+        {
+
         }
     }
 }

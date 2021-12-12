@@ -25,6 +25,13 @@ namespace ProjetFinal
         public PretPage()
         {
             this.InitializeComponent();
+            GestionBD.getInstance().getPrets();
+            myTableau.ItemsSource = GestionBD.getInstance().getListePrets();
+        }
+
+        private void myTableau_CellEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridCellEditEndedEventArgs e)
+        {
+
         }
     }
 }

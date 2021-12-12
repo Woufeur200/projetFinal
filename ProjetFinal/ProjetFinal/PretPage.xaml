@@ -4,12 +4,43 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Light">
 
     <Grid>
-        <TextBlock Text="Pret" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80"></TextBlock>
+        <controls:DataGrid x:Name="myTableau" AutoGenerateColumns="False" CellEditEnded="myTableau_CellEditEnded">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Header="ID Pret"
+                    Binding="{Binding IdPret}"
+                    Width="100"/>
+                <controls:DataGridTextColumn
+                    Header="ID Client"
+                    Binding="{Binding IdClient}"
+                    Width="100"/>
+                <controls:DataGridTextColumn
+                    Header="Date Pret"
+                    Binding="{Binding DatePret}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Heure"
+                    Binding="{Binding TimePret}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="returnDate"
+                    Binding="{Binding ReturnDate}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="ID Utilisateur"
+                    Binding="{Binding IdUser}"
+                    Width="120"/>
+                <controls:DataGridTextColumn
+                    Header="État du Pret"
+                    Binding="{Binding StatePret}"
+                    Width="200"/>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
     </Grid>
 </Page>

@@ -13,6 +13,17 @@
     <RootPropertyPathName Name="Model" />
     <RootPropertyPathName Name="Brand" />
     <RootPropertyPathName Name="IdMat" />
+    <RootPropertyPathName Name="StatePret" />
+    <RootPropertyPathName Name="IdUser" />
+    <RootPropertyPathName Name="ReturnDate" />
+    <RootPropertyPathName Name="TimePret" />
+    <RootPropertyPathName Name="DatePret" />
+    <RootPropertyPathName Name="IdPret" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Prenom" />
+    <RootPropertyPathName Name="Nom" />
+    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="IdUtilisateur" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -51,6 +62,13 @@
       <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
@@ -62,13 +80,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Header" />

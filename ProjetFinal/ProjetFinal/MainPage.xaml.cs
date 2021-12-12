@@ -22,6 +22,7 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public string whatFrame = "";
         public MainPage()
         {
             this.InitializeComponent();
@@ -34,7 +35,10 @@ namespace ProjetFinal
 
         private void btRemove_Click(object sender, RoutedEventArgs e)
         {
-
+            if(whatFrame.Equals("C"))
+            {
+                //GestionBD.getInstance().deleteClient((Client)myTableau.SelectedItem);
+            }
         }
 
         private void btSave_Click(object sender, RoutedEventArgs e)
@@ -53,21 +57,25 @@ namespace ProjetFinal
 
         private void btClient_Click(object sender, RoutedEventArgs e)
         {
+            whatFrame = "C";
             mainFrame.Navigate(typeof(ClientPage));
         }
 
         private void btMateriel_Click(object sender, RoutedEventArgs e)
         {
+            whatFrame = "M";
             mainFrame.Navigate(typeof(MaterielPage));
         }
 
         private void btPret_Click(object sender, RoutedEventArgs e)
         {
+            whatFrame = "P";
             mainFrame.Navigate(typeof(PretPage));
         }
 
         private void btUtilisateur_Click(object sender, RoutedEventArgs e)
         {
+            whatFrame = "U";
             mainFrame.Navigate(typeof(UtilisateurPage));
         }
 

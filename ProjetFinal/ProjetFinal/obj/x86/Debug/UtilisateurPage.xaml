@@ -4,13 +4,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Light">
 
     <Grid>
-        <TextBlock Text="Utilisateur" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80"></TextBlock>
+        <controls:DataGrid x:ConnectionId='2' x:Name="myTableau" AutoGenerateColumns="False"                                        >
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Header="ID Utilisateur"
+                    Binding="{Binding IdUtilisateur}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Nom utilisateur"
+                    Binding="{Binding Username}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Nom"
+                    Binding="{Binding Nom}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Prenom"
+                    Binding="{Binding Prenom}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Mot de passe"
+                    Binding="{Binding Password}"
+                    Width="200"/>
+                
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
     </Grid>
 </Page>
 

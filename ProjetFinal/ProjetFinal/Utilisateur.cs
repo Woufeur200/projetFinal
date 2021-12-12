@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,35 +10,79 @@ namespace ProjetFinal
 {
     class Utilisateur
     {
-        string idUser;
-        string name;
-        string firstName;
+        int idUtilisateur;
+        string username;
+        string nom;
+        string prenom;
         string password;
 
 
         public Utilisateur()
         {
-            this.IdUser = "";
-            this.Name = "";
-            this.FirstName = "";
-            this.Password = "";
+            this.idUtilisateur = 0;
+            this.username = "";
+            this.nom = "";
+            this.prenom = "";
+            this.password = "";
         }
-        public Utilisateur(string idUser, string name, string firstName, string password)
+        public Utilisateur(int idUtilisateur, string username, string nom, string prenom, string password)
         {
-            this.IdUser = idUser;
-            this.Name = name;
-            this.FirstName = firstName;
+            this.idUtilisateur = idUtilisateur;
+            this.username = username;
+            this.nom = nom;
+            this.prenom = prenom;
             this.Password = password;
         }
 
-        public string IdUser { get => idUser; set => idUser = value; }
-        public string Name { get => name; set => name = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string Password { get => password; set => password = value; }
+        public int IdUtilisateur {
+            get => idUtilisateur;
+            set
+            {
+                idUtilisateur = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Username {
+            get => username;
+            set
+            {
+                username = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Nom { 
+            get => nom;
+            set
+            {
+                nom = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Prenom
+        {
+            get => prenom;
+            set
+            {
+                prenom = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Password { 
+            get => password;
+            set
+            {
+                password = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
+        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         public override string ToString()
         {
-            return this.idUser + ";" + this.name + ";" + this.firstName + ";" + this.password;
+            return this.idUtilisateur + ";" + this.username + ";" + this.nom + ";" + this.password;
         }
     }
 }

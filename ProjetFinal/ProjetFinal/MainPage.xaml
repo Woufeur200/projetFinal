@@ -33,5 +33,6 @@
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <Frame x:Name="mainFrame" Grid.Row="1"/>
+        <TextBlock x:Name="test" Text="test" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
     </Grid>
 </Page>
