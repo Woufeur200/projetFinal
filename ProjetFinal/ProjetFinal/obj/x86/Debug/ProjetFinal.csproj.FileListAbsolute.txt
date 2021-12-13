@@ -91,4 +91,9 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885454160000000.json
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.g.i.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.g.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.xaml
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientContent.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjetFinal.csproj.AssemblyReference.cache

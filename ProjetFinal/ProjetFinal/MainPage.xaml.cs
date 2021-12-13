@@ -28,16 +28,21 @@ namespace ProjetFinal
             this.InitializeComponent();
         }
 
-        private void btAdd_Click(object sender, RoutedEventArgs e)
+        private async void btAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            if (whatFrame.Equals("C"))
+            {
+                ContentDialog contentDialogClient = new ClientContent();
+                await contentDialogClient.ShowAsync();
+            }
         }
 
         private void btRemove_Click(object sender, RoutedEventArgs e)
         {
             if(whatFrame.Equals("C"))
             {
-                //GestionBD.getInstance().deleteClient((Client)myTableau.SelectedItem);
+                Client c = (Client)GestionBD.getInstance().ObjectSelected;
+                GestionBD.getInstance().deleteClient(c);
             }
         }
 

@@ -17,14 +17,17 @@ namespace ProjetFinal
         ObservableCollection<Materiel> listeM = new ObservableCollection<Materiel>();
         ObservableCollection<Pret> listeP = new ObservableCollection<Pret>();
 
+        Object objectSelected;
+
         //internal int connexion;
         string usernameLogged;
         int logged;
         int idUser;
 
+
         public GestionBD()
         {
-            // this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;");
+            //this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;");
             this.con = new MySqlConnection("Server = localhost; Database = prog; Uid = root; Pwd = root;");
         }
 
@@ -35,6 +38,16 @@ namespace ProjetFinal
 
             return gestionBD;
         }
+
+        public object ObjectSelected {
+            get => objectSelected;
+            set
+            {
+                objectSelected = value;
+            }
+        }
+
+
         /* Login */
         public int login(string username, string password)
         {
@@ -71,9 +84,6 @@ namespace ProjetFinal
                 usernameLogged = "";
                 return check;
             }
-
-
-
         }
 
 
@@ -93,9 +103,9 @@ namespace ProjetFinal
         {
             listeC.Clear();
 
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_view_clients");
             commande.Connection = con;
-            commande.CommandText = "Select * from clients";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             con.Open();
             MySqlDataReader r = commande.ExecuteReader();
@@ -120,25 +130,46 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand("p_add_client");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                
+                MySqlCommand commande = new MySqlCommand("p_add_client");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@idClient", c.IdClient);
-            commande.Parameters.AddWithValue("@clientName", c.ClientName);
-            commande.Parameters.AddWithValue("@email", c.Email);
-            commande.Parameters.AddWithValue("@phone", c.Phone);
-            commande.Parameters.AddWithValue("@poste", c.Poste);
-            commande.Parameters.AddWithValue("@deskNumber", c.DeskNumber);
-            commande.Parameters.AddWithValue("@type", c.Type);
+                commande.Parameters.AddWithValue("clientName", c.ClientName);
+                commande.Parameters.AddWithValue("email", c.Email);
+                commande.Parameters.AddWithValue("phone", c.Phone);
+                commande.Parameters.AddWithValue("poste", c.Poste);
+                commande.Parameters.AddWithValue("deskNumber", c.DeskNumber);
+                commande.Parameters.AddWithValue("type", c.Type);
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
+                con.Close();
+                con.Open();
+                commande.Prepare();
+                MySqlDataReader r = commande.ExecuteReader();
 
-            con.Close();
+                if(r.Read())
+                {
+                    c.IdClient = r.GetInt32(0);
+                } 
 
+                con.Close();
+
+                listeC.Add(c);
+
+                return retour;
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
+
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
             return retour;
+
+
         }
 
 

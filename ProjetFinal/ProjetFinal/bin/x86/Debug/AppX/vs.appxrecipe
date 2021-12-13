@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-12T21:47:40.502</Modified>
+      <Modified>2021-12-13T20:12:11.230</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
       <PackagePath>entrypoint\ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-12T21:47:39.902</Modified>
+      <Modified>2021-12-13T20:12:09.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\bouncycastle.netcore\1.8.5\lib\netstandard2.0\BouncyCastle.Crypto.dll">
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
@@ -142,35 +142,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
       <PackagePath>ProjetFinal.xr.xml</PackagePath>
-      <Modified>2021-12-12T21:39:08.004</Modified>
+      <Modified>2021-12-13T18:37:48.164</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.804</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientContent.xbf">
+      <PackagePath>ClientContent.xbf</PackagePath>
+      <Modified>2021-12-13T20:12:09.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientPage.xbf">
       <PackagePath>ClientPage.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MaterielPage.xbf">
       <PackagePath>MaterielPage.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
       <PackagePath>PageConnexion.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretPage.xbf">
       <PackagePath>PretPage.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\UtilisateurPage.xbf">
       <PackagePath>UtilisateurPage.xbf</PackagePath>
-      <Modified>2021-12-12T21:47:39.847</Modified>
+      <Modified>2021-12-13T20:12:09.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -182,11 +186,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-12T18:40:23.670</Modified>
+      <Modified>2021-12-13T02:23:08.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
       <PackagePath>ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-12T21:47:40.498</Modified>
+      <Modified>2021-12-13T20:12:11.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
