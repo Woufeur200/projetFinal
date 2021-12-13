@@ -33,5 +33,10 @@ namespace ProjetFinal
         {
 
         }
+
+        private void myTableau_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+                GestionBD.getInstance().ObjectSelected = myTableau.SelectedItem;
+        }
     }
 }

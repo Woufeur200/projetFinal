@@ -10,7 +10,7 @@
     RequestedTheme="Light">
 
     <Grid>
-        <controls:DataGrid x:Name="myTableau" AutoGenerateColumns="False" CellEditEnded="myTableau_CellEditEnded">
+        <controls:DataGrid x:Name="myTableau" AutoGenerateColumns="False" CellEditEnded="myTableau_CellEditEnded" SelectionChanged="myTableau_SelectionChanged">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
                     Header="ID Materiel"

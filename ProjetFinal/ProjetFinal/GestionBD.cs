@@ -183,13 +183,13 @@ namespace ProjetFinal
             commande.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            commande.Parameters.AddWithValue("@idClient", c.IdClient);
-            commande.Parameters.AddWithValue("@clientName", c.ClientName);
-            commande.Parameters.AddWithValue("@email", c.Email);
-            commande.Parameters.AddWithValue("@phone", c.Phone);
-            commande.Parameters.AddWithValue("@poste", c.Poste);
-            commande.Parameters.AddWithValue("@deskNumber", c.DeskNumber);
-            commande.Parameters.AddWithValue("@type", c.Type);
+            commande.Parameters.AddWithValue("idClient", c.IdClient);
+            commande.Parameters.AddWithValue("clientName", c.ClientName);
+            commande.Parameters.AddWithValue("email", c.Email);
+            commande.Parameters.AddWithValue("phone", c.Phone);
+            commande.Parameters.AddWithValue("poste", c.Poste);
+            commande.Parameters.AddWithValue("deskNumber", c.DeskNumber);
+            commande.Parameters.AddWithValue("type", c.Type);
 
             con.Open();
             commande.Prepare();
@@ -206,11 +206,11 @@ namespace ProjetFinal
 
             try
             {
-                MySqlCommand commande = new MySqlCommand();
+                MySqlCommand commande = new MySqlCommand("p_delete_client");
                 commande.Connection = con;
-                commande.CommandText = "delete from clients where idClient = @idClient";
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("@idClient", o.IdClient);
+                commande.Parameters.AddWithValue("idClientV", o.IdClient);
 
                 con.Open();
                 commande.Prepare();
@@ -353,9 +353,10 @@ namespace ProjetFinal
         {
             listeM.Clear();
 
-            MySqlCommand commande = new MySqlCommand();
+
+            MySqlCommand commande = new MySqlCommand("p_view_materiels");
             commande.Connection = con;
-            commande.CommandText = "Select * from materiel";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             con.Open();
             MySqlDataReader r = commande.ExecuteReader();
@@ -380,23 +381,37 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand("p_add_materiel");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
 
-            commande.Parameters.AddWithValue("@idMat", m.IdMat);
-            commande.Parameters.AddWithValue("@brand", m.Brand);
-            commande.Parameters.AddWithValue("@model", m.Model);
-            commande.Parameters.AddWithValue("@state", m.State);
-            commande.Parameters.AddWithValue("@note", m.Note);
+                MySqlCommand commande = new MySqlCommand("p_add_materiel");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
+                commande.Parameters.AddWithValue("idMat", m.IdMat);
+                commande.Parameters.AddWithValue("brand", m.Brand);
+                commande.Parameters.AddWithValue("model", m.Model);
+                commande.Parameters.AddWithValue("state", m.State);
+                commande.Parameters.AddWithValue("note", m.Note);
 
-            con.Close();
+                con.Open();
+                commande.Prepare();
+                retour = commande.ExecuteNonQuery();
+                con.Close();
 
+                listeM.Add(m);
+
+                return retour;
+            } 
+            catch(MySqlException ex)
+            {
+                retour = 0;
+
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
             return retour;
+
         }
 
 
@@ -431,11 +446,11 @@ namespace ProjetFinal
 
             try
             {
-                MySqlCommand commande = new MySqlCommand();
+                MySqlCommand commande = new MySqlCommand("p_delete_materiel");
                 commande.Connection = con;
-                commande.CommandText = "delete from materiel where idMat = @idMat";
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("@idClient", m.IdMat);
+                commande.Parameters.AddWithValue("idMatV", m.IdMat);
 
                 con.Open();
                 commande.Prepare();

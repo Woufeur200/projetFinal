@@ -132,6 +132,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Materiel.cs" />
+    <Compile Include="MaterielContent.xaml.cs">
+      <DependentUpon>MaterielContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MaterielPage.xaml.cs">
       <DependentUpon>MaterielPage.xaml</DependentUpon>
     </Compile>
@@ -179,6 +182,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MaterielContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MaterielPage.xaml">
       <SubType>Designer</SubType>
