@@ -32,8 +32,10 @@
       <RootProperty Name="SecondaryButtonText" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
+      <RootProperty Name="CloseButtonText" />
       <RootEvent Name="PrimaryButtonClick" />
       <RootEvent Name="SecondaryButtonClick" />
+      <RootEvent Name="CloseButtonClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Children" />
@@ -57,8 +59,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="Text" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
     </RootType>
@@ -113,6 +113,8 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ProjetFinal.PageConnexion" />
+    <RootType FullName="ProjetFinal.PretAjouter" />
+    <RootType FullName="ProjetFinal.PretContent" />
     <RootType FullName="ProjetFinal.PretPage" />
     <RootType FullName="ProjetFinal.UtilisateurContent" />
     <RootType FullName="ProjetFinal.UtilisateurPage" />

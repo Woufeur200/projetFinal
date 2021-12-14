@@ -1,0 +1,44 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="ProjetFinal.PretContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Ajouter un pret"
+    PrimaryButtonText="Ajouter"
+    CloseButtonText="Annuler"
+                                                     
+                                                         
+    
+    RequestedTheme="Light">
+
+    <Grid>
+        <StackPanel x:ConnectionId='2' x:Name="myStackPanel" Orientation="Vertical" >
+            
+
+            <TextBox x:ConnectionId='3' x:Name="tBox2" Margin="2" Header="Id client"                                />
+            <TextBlock x:ConnectionId='4' x:Name="tBox2_Warning" Visibility="Collapsed" Foreground="Red">L'Id du client ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='5' x:Name="tBox3" Margin="2" Header="Date pret"                                />
+            <TextBlock x:ConnectionId='6' x:Name="tBox3_Warning" Visibility="Collapsed" Foreground="Red">La date ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='7' x:Name="tBox4" Margin="2" Header="Heure pret"                                />
+            <TextBlock x:ConnectionId='8' x:Name="tBox4_Warning" Visibility="Collapsed" Foreground="Red">L'heure du pret ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='9' x:Name="tBox5" Margin="2" Header="Date retour"                                />
+            <TextBlock x:ConnectionId='10' x:Name="tBox5_Warning" Visibility="Collapsed" Foreground="Red">La date de retour ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='11' x:Name="tBox6" Margin="2" Header="Nom d'utilisateur"                                />
+            <TextBlock x:ConnectionId='12' x:Name="tBox6_Warning" Visibility="Collapsed" Foreground="Red">Le nom d'utilisateur ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='13' x:Name="tBox7" Margin="2" Header="État"                                />
+            <TextBlock x:ConnectionId='14' x:Name="tBox7_Warning" Visibility="Collapsed" Foreground="Red">L'état du pret ne peux pas être vide.</TextBlock>
+
+
+
+        </StackPanel>
+    </Grid>
+</ContentDialog>
+

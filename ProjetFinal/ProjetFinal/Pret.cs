@@ -15,7 +15,7 @@ namespace ProjetFinal
         string datePret;
         string timePret;
         string returnDate;
-        int idUser;
+        string username;
         string statePret;
 
 
@@ -26,17 +26,17 @@ namespace ProjetFinal
             this.datePret = "";
             this.timePret = "";
             this.returnDate = "";
-            this.idUser = 0;
+            this.username = "";
             this.statePret = "";
         }
-        public Pret(int idPret, int idClient, string datePret, string timePret, string returnDate, int idUser, string statePret)
+        public Pret(int idPret, int idClient, string datePret, string timePret, string returnDate, string username, string statePret)
         {
             this.idPret = idPret;
             this.idClient = idClient;
             this.datePret = datePret;
             this.timePret = timePret;
             this.returnDate = returnDate;
-            this.idUser = idUser;
+            this.username = username;
             this.statePret = statePret;
         }
 
@@ -85,12 +85,12 @@ namespace ProjetFinal
                 OnPropertyChanged();
             }
         }
-        public int IdUser
+        public string Username
         {
-            get => idUser;
+            get => username;
             set
             {
-                idUser = value;
+                username = value;
                 OnPropertyChanged();
             }
         }
@@ -110,7 +110,7 @@ namespace ProjetFinal
 
         public override string ToString()
         {
-            return this.idPret + ";" + this.idClient + ";" + this.datePret + ";" + this.timePret + ";" + this.returnDate + ";" + this.idUser + ";" + this.statePret;
+            return this.idPret + ";" + this.idClient + ";" + this.datePret + ";" + this.timePret + ";" + this.returnDate + ";" + this.username + ";" + this.statePret;
         }
     }
 }

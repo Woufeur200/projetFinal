@@ -107,3 +107,13 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\UtilisateurContent.xaml
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\UtilisateurContent.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\UtilisateurContent.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretContent.g.i.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretContent.g.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretContent.xaml
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretContent.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretContent.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.g.i.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.g.cs
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.xaml
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretAjouter.xbf

@@ -16,24 +16,23 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
-            <AppBarButton x:ConnectionId='4' Icon="Add" x:Name="btAdd" Label="Ajouter"                     />
-            <AppBarButton x:ConnectionId='5' Icon="Remove" x:Name="btRemove" Label="Supprimer"                        />
-            <AppBarButton x:ConnectionId='6' Icon="Save" x:Name="btSave" Label="Enregistrer"                      />
-            <AppBarButton x:ConnectionId='7' Icon="ClosePane" x:Name="btLogout"                        />
+            <AppBarButton x:ConnectionId='3' Icon="Add" x:Name="btAdd" Label="Ajouter"                     />
+            <AppBarButton x:ConnectionId='4' Icon="Remove" x:Name="btRemove" Label="Supprimer"                        />
+            <AppBarButton x:ConnectionId='5' Icon="Save" x:Name="btSave" Label="Enregistrer"                      />
+            <AppBarButton x:ConnectionId='6' Icon="ClosePane" x:Name="btLogout"                        />
             
             <CommandBar.Content>
-                <AppBarButton x:ConnectionId='8' Icon="Back" x:Name="btBack"                      />
+                <AppBarButton x:ConnectionId='7' Icon="Back" x:Name="btBack"                      />
             </CommandBar.Content>
 
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:ConnectionId='9' Icon="People" x:Name="btClient" Label="Clients"                       />
-                <AppBarButton x:ConnectionId='10' Icon="Print" x:Name="btMateriel" Label="Materiels"                         />
-                <AppBarButton x:ConnectionId='11' Icon="AllApps" x:Name="btPret" Label="Prets"                     />
-                <AppBarButton x:ConnectionId='12' Icon="ContactInfo" x:Name="btUtilisateur" Label="Utilisateurs"                            />
+                <AppBarButton x:ConnectionId='8' Icon="People" x:Name="btClient" Label="Clients"                       />
+                <AppBarButton x:ConnectionId='9' Icon="Print" x:Name="btMateriel" Label="Materiels"                         />
+                <AppBarButton x:ConnectionId='10' Icon="AllApps" x:Name="btPret" Label="Prets"                     />
+                <AppBarButton x:ConnectionId='11' Icon="ContactInfo" x:Name="btUtilisateur" Label="Utilisateurs"                            />
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <Frame x:ConnectionId='2' x:Name="mainFrame" Grid.Row="1"/>
-        <TextBlock x:ConnectionId='3' x:Name="test" Text="test" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
     </Grid>
 </Page>
 

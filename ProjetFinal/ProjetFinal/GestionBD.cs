@@ -16,13 +16,15 @@ namespace ProjetFinal
         ObservableCollection<Utilisateur> listeU = new ObservableCollection<Utilisateur>();
         ObservableCollection<Materiel> listeM = new ObservableCollection<Materiel>();
         ObservableCollection<Pret> listeP = new ObservableCollection<Pret>();
+        ObservableCollection<DetailsPret> listeDP = new ObservableCollection<DetailsPret>();
+
 
         Object objectSelected;
 
         //internal int connexion;
         string usernameLogged;
         int logged;
-        int idUser;
+        string username;
 
 
         public GestionBD()
@@ -48,11 +50,11 @@ namespace ProjetFinal
         }
 
 
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /* Login */
         public int login(string username, string password)
         {
             int check = 0;
-            string nom = "";
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
             commande.CommandText = "Select * from utilisateur WHERE username = @username AND password = @password";
@@ -67,7 +69,6 @@ namespace ProjetFinal
             while (r.Read())
             {
                 check = 1;
-                nom = r.GetString(2);
                 username = r.GetString(0);
             }
             r.Close();
@@ -75,7 +76,7 @@ namespace ProjetFinal
             if (check == 1)
             {
                 logged = 1;
-                usernameLogged = nom;
+                usernameLogged = username;
                 return check;
             }
             else
@@ -86,8 +87,6 @@ namespace ProjetFinal
             }
         }
 
-
-
         public int logout()
         {
             logged = 0;
@@ -96,8 +95,9 @@ namespace ProjetFinal
         }
 
 
-
+        /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /* client */
+
         public ObservableCollection<Client> getClients()
         {
             listeC.Clear();
@@ -170,8 +170,6 @@ namespace ProjetFinal
 
 
         }
-
-
 
         public int modifierClient(Client c)
         {
@@ -298,8 +296,6 @@ namespace ProjetFinal
            
         }
 
-
-
         public int modifierUtilisateur(Utilisateur u)
         {
             int retour = 0;
@@ -354,6 +350,7 @@ namespace ProjetFinal
             return retour;
 
         }
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*Materiel*/
         public ObservableCollection<Materiel> getMateriels()
@@ -421,8 +418,6 @@ namespace ProjetFinal
 
         }
 
-
-
         public int modifierMateriel(Materiel m)
         {
             int retour = 0;
@@ -486,9 +481,9 @@ namespace ProjetFinal
         {
             listeP.Clear();
 
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_view_pret");
             commande.Connection = con;
-            commande.CommandText = "Select * from pret";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             con.Open();
             MySqlDataReader r = commande.ExecuteReader();
@@ -496,7 +491,7 @@ namespace ProjetFinal
             while (r.Read())
             {
 
-                listeP.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4),r.GetInt32(5),r.GetString(6)));
+                listeP.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4),r.GetString(5),r.GetString(6)));
             }
             r.Close();
             con.Close();
@@ -509,29 +504,60 @@ namespace ProjetFinal
             return listeP;
         }
 
-        public int ajouterPret(Pret p)
+        public int ajouterPret(Pret p, ObservableCollection<Materiel> m)
         {
             int retour = 0;
+            try
+            {
 
-            MySqlCommand commande = new MySqlCommand("p_add_pret");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@idPret", p.IdPret);
-            commande.Parameters.AddWithValue("@idClient", p.IdClient);
-            commande.Parameters.AddWithValue("@datePret", p.DatePret);
-            commande.Parameters.AddWithValue("@timePret", p.TimePret);
-            commande.Parameters.AddWithValue("@returnDate", p.ReturnDate);
-            commande.Parameters.AddWithValue("@idUser", p.IdUser);
-            commande.Parameters.AddWithValue("@statePret", p.StatePret);
+                MySqlCommand commande = new MySqlCommand("p_add_pret");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
+                commande.Parameters.AddWithValue("@idClient", p.IdClient);
+                commande.Parameters.AddWithValue("@datePret", p.DatePret);
+                commande.Parameters.AddWithValue("@timePret", p.TimePret);
+                commande.Parameters.AddWithValue("@returnDate", p.ReturnDate);
+                commande.Parameters.AddWithValue("@username", username);
+                commande.Parameters.AddWithValue("@statePret", p.StatePret);
 
-            con.Close();
+                con.Open();
+                commande.Prepare();
 
+                MySqlDataReader r = commande.ExecuteReader();
+                r.Read();
+                int id = r.GetInt32(0);
+                r.Close();
+
+                foreach(Materiel item in m)
+                {
+                    MySqlCommand commandeDP = new MySqlCommand("p_ajout_detailspret");
+                    commandeDP.Connection = con;
+                    commandeDP.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    commandeDP.Parameters.AddWithValue("idPret", id);
+                    commandeDP.Parameters.AddWithValue("idMateriel", item.IdMat);
+                    commandeDP.Parameters.AddWithValue("statePret", 1);
+                    commandeDP.Parameters.AddWithValue("username", username);
+
+                    commandeDP.ExecuteNonQuery();
+                }
+
+                con.Close();
+
+                listeP.Add(p);
+
+                return retour;
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
             return retour;
+            
         }
 
 
@@ -551,7 +577,7 @@ namespace ProjetFinal
             commande.Parameters.AddWithValue("@datePret", p.DatePret);
             commande.Parameters.AddWithValue("@timePret", p.TimePret);
             commande.Parameters.AddWithValue("@returnDate", p.ReturnDate);
-            commande.Parameters.AddWithValue("@idUser", p.IdUser);
+            commande.Parameters.AddWithValue("@username", p.Username);
             commande.Parameters.AddWithValue("@statePret", p.StatePret);
 
             con.Open();
@@ -594,6 +620,35 @@ namespace ProjetFinal
 
             return retour;
 
+        }
+
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /*Details Pret */
+        public ObservableCollection<DetailsPret> getDetailsPrets()
+        {
+            listeDP.Clear();
+
+            MySqlCommand commande = new MySqlCommand("p_view_detailsPret");
+            commande.Connection = con;
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+            con.Open();
+            MySqlDataReader r = commande.ExecuteReader();
+
+            while (r.Read())
+            {
+
+                listeDP.Add(new DetailsPret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+            }
+            r.Close();
+            con.Close();
+
+            return listeDP;
+        }
+
+        public ObservableCollection<DetailsPret> getListeDetailsPret()
+        {
+            return listeDP;
         }
     }
 }

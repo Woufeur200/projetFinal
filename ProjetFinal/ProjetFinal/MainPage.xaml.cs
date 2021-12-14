@@ -45,6 +45,10 @@ namespace ProjetFinal
                 ContentDialog contentDialogUtilisateur = new UtilisateurContent();
                 await contentDialogUtilisateur.ShowAsync();
             }
+            else if (whatFrame.Equals("P"))
+            {
+                mainFrame.Navigate(typeof(PretAjouter));
+            }
         }
 
         private void btRemove_Click(object sender, RoutedEventArgs e)
@@ -63,6 +67,10 @@ namespace ProjetFinal
             {
                 Utilisateur u = (Utilisateur)GestionBD.getInstance().ObjectSelected;
                 GestionBD.getInstance().deleteUtilisateur(u);
+            }
+            else if (whatFrame.Equals("P"))
+            {
+                //eatdick
             }
         }
 

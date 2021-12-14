@@ -12,7 +12,7 @@ namespace ProjetFinal
         int idPret;
         string idMat;
         string stateDet;
-        string idUser;
+        string username;
 
         public DetailsPret()
         {
@@ -20,27 +20,27 @@ namespace ProjetFinal
             this.IdPret = 0;
             this.IdMat = "";
             this.StateDet = "";
-            this.IdUser = "";
+            this.Username = "";
         }
 
-        public DetailsPret(int idDetails, int idPret, string idMat, string stateDet, string idUser)
+        public DetailsPret(int idDetails, int idPret, string idMat, string stateDet, string username)
         {
             this.IdDetails = idDetails;
             this.IdPret = idPret;
             this.IdMat = idMat;
             this.StateDet = stateDet;
-            this.IdUser = idUser;
+            this.Username = username;
         }
 
         public int IdDetails { get => idDetails; set => idDetails = value; }
         public int IdPret { get => idPret; set => idPret = value; }
         public string IdMat { get => idMat; set => idMat = value; }
         public string StateDet { get => stateDet; set => stateDet = value; }
-        public string IdUser { get => idUser; set => idUser = value; }
+        public string Username { get => username; set => username = value; }
 
         public override string ToString()
         {
-            return this.idDetails + ";" + this.idPret + ";" + this.idMat + ";" + this.stateDet + ";" + this.idUser;
+            return this.idDetails + ";" + this.idPret + ";" + this.idMat + ";" + this.stateDet + ";" + this.username;
         }
     }
 }
