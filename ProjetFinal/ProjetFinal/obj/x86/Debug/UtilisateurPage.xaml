@@ -10,7 +10,7 @@
     RequestedTheme="Light">
 
     <Grid>
-        <controls:DataGrid x:ConnectionId='2' x:Name="myTableau" AutoGenerateColumns="False"                                        >
+        <controls:DataGrid x:ConnectionId='2' x:Name="myTableau" AutoGenerateColumns="False"                                                                                       >
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
                     Header="Nom utilisateur"

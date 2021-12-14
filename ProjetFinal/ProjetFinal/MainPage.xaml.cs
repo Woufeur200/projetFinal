@@ -40,6 +40,11 @@ namespace ProjetFinal
                 ContentDialog contentDialogMateriel = new MaterielContent();
                 await contentDialogMateriel.ShowAsync();
             }
+            else if (whatFrame.Equals("U"))
+            {
+                ContentDialog contentDialogUtilisateur = new UtilisateurContent();
+                await contentDialogUtilisateur.ShowAsync();
+            }
         }
 
         private void btRemove_Click(object sender, RoutedEventArgs e)
@@ -53,6 +58,11 @@ namespace ProjetFinal
             {
                 Materiel m = (Materiel)GestionBD.getInstance().ObjectSelected;
                 GestionBD.getInstance().deleteMateriel(m);
+            }
+            else if (whatFrame.Equals("U"))
+            {
+                Utilisateur u = (Utilisateur)GestionBD.getInstance().ObjectSelected;
+                GestionBD.getInstance().deleteUtilisateur(u);
             }
         }
 
