@@ -13,10 +13,6 @@
         <controls:DataGrid x:ConnectionId='2' x:Name="myTableau" AutoGenerateColumns="False"                                        >
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
-                    Header="ID Utilisateur"
-                    Binding="{Binding IdUtilisateur}"
-                    Width="200"/>
-                <controls:DataGridTextColumn
                     Header="Nom utilisateur"
                     Binding="{Binding Username}"
                     Width="200"/>

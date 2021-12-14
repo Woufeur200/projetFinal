@@ -23,7 +23,6 @@
     <RootPropertyPathName Name="Prenom" />
     <RootPropertyPathName Name="Nom" />
     <RootPropertyPathName Name="Username" />
-    <RootPropertyPathName Name="IdUtilisateur" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -115,6 +114,7 @@
     </RootType>
     <RootType FullName="ProjetFinal.PageConnexion" />
     <RootType FullName="ProjetFinal.PretPage" />
+    <RootType FullName="ProjetFinal.UtilisateurContent" />
     <RootType FullName="ProjetFinal.UtilisateurPage" />
   </Roots.RootTypes>
 </Roots>

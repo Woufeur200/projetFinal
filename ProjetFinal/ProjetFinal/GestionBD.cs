@@ -67,8 +67,8 @@ namespace ProjetFinal
             while (r.Read())
             {
                 check = 1;
-                nom = r.GetString(3);
-                idUser = r.GetInt32(0);
+                nom = r.GetString(2);
+                username = r.GetString(0);
             }
             r.Close();
             con.Close();
@@ -92,7 +92,6 @@ namespace ProjetFinal
         {
             logged = 0;
             usernameLogged = "";
-            idUser = 0;
             return logged;
         }
 
@@ -243,9 +242,9 @@ namespace ProjetFinal
         public ObservableCollection<Utilisateur> getUtilisateur()
         {
             listeU.Clear();
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_view_utilisateur");
             commande.Connection = con;
-            commande.CommandText = "Select * from utilisateur";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             con.Open();
             MySqlDataReader r = commande.ExecuteReader();
@@ -253,7 +252,7 @@ namespace ProjetFinal
             while (r.Read())
             {
 
-                listeU.Add(new Utilisateur(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3),r.GetString(4)));
+                listeU.Add(new Utilisateur(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3)));
             }
             r.Close();
             con.Close();
@@ -266,28 +265,37 @@ namespace ProjetFinal
             return listeU;
         }
 
-        public int ajouterUsager(Utilisateur u)
+        public int ajouterUtilisateur(Utilisateur u)
         {
             int retour = 0;
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_add_utilisateur");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            MySqlCommand commande = new MySqlCommand("p_add_user");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
-
-            commande.Parameters.AddWithValue("@idUtilisateur", u.IdUtilisateur);
-            commande.Parameters.AddWithValue("@username", u.Username);
-            commande.Parameters.AddWithValue("@nom", u.Nom);
-            commande.Parameters.AddWithValue("@prenom", u.Prenom);
-            commande.Parameters.AddWithValue("@password", u.Password);
+                commande.Parameters.AddWithValue("@username", u.Username);
+                commande.Parameters.AddWithValue("@nom", u.Nom);
+                commande.Parameters.AddWithValue("@prenom", u.Prenom);
+                commande.Parameters.AddWithValue("@password", u.Password);
 
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
-
-            con.Close();
+                con.Open();
+                commande.Prepare();
+                retour = commande.ExecuteNonQuery();
+                con.Close();
+                listeU.Add(u);
+                return retour;
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
 
             return retour;
+           
         }
 
 
@@ -296,11 +304,10 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand("p_modify_user");
+            MySqlCommand commande = new MySqlCommand("p_modify_utilisateur");
             commande.Connection = con;
             commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@idUtilisateur", u.IdUtilisateur);
             commande.Parameters.AddWithValue("@username", u.Username);
             commande.Parameters.AddWithValue("@nom", u.Nom);
             commande.Parameters.AddWithValue("@prenom", u.Prenom);
@@ -321,11 +328,11 @@ namespace ProjetFinal
 
             try
             {
-                MySqlCommand commande = new MySqlCommand();
+                MySqlCommand commande = new MySqlCommand("p_delete_utilisateur");
                 commande.Connection = con;
-                commande.CommandText = "delete from utilisateur where idUtilisateur = @idUtilisateur";
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("@idUtilisateur", u.IdUtilisateur);
+                commande.Parameters.AddWithValue("usernameV", u.Username);
 
                 con.Open();
                 commande.Prepare();

@@ -1,0 +1,32 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="ProjetFinal.UtilisateurContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Ajouter Utilisateur"
+    PrimaryButtonText="Ajouter"
+    SecondaryButtonText="Annuler"
+                                                         
+                                                             
+    RequestedTheme="Light">
+
+    <Grid>
+        <StackPanel x:ConnectionId='2' x:Name="myStackPanel" Orientation="Vertical">
+            <TextBox x:ConnectionId='3' x:Name="tBox2" Margin="2" Header="Nom Utilisateur"                                />
+            <TextBlock x:ConnectionId='4' x:Name="tBox2_Warning" Visibility="Collapsed" Foreground="Red">Le nom d'utilisateur ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='5' x:Name="tBox3" Margin="2" Header="Nom"                                />
+            <TextBlock x:ConnectionId='6' x:Name="tBox3_Warning" Visibility="Collapsed" Foreground="Red">Le nom ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='7' x:Name="tBox4" Margin="2" Header="Prénom"                                />
+            <TextBlock x:ConnectionId='8' x:Name="tBox4_Warning" Visibility="Collapsed" Foreground="Red">Le prénom ne peux pas être vide.</TextBlock>
+
+            <TextBox x:ConnectionId='9' x:Name="tBox5" Margin="2" Header="Mot de passe"                                />
+            <TextBlock x:ConnectionId='10' x:Name="tBox5_Warning" Visibility="Collapsed" Foreground="Red">Le mot de passe ne peux pas être vide.</TextBlock>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
+

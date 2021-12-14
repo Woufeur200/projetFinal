@@ -10,7 +10,6 @@ namespace ProjetFinal
 {
     class Utilisateur
     {
-        int idUtilisateur;
         string username;
         string nom;
         string prenom;
@@ -18,30 +17,20 @@ namespace ProjetFinal
 
 
         public Utilisateur()
-        {
-            this.idUtilisateur = 0;
+        { 
             this.username = "";
             this.nom = "";
             this.prenom = "";
             this.password = "";
         }
-        public Utilisateur(int idUtilisateur, string username, string nom, string prenom, string password)
+        public Utilisateur(string username, string nom, string prenom, string password)
         {
-            this.idUtilisateur = idUtilisateur;
             this.username = username;
             this.nom = nom;
             this.prenom = prenom;
             this.Password = password;
         }
 
-        public int IdUtilisateur {
-            get => idUtilisateur;
-            set
-            {
-                idUtilisateur = value;
-                OnPropertyChanged();
-            }
-        }
         public string Username {
             get => username;
             set
@@ -82,7 +71,7 @@ namespace ProjetFinal
 
         public override string ToString()
         {
-            return this.idUtilisateur + ";" + this.username + ";" + this.nom + ";" + this.password;
+            return   this.username + ";" + this.nom + ";" + this.prenom + ";" + this.password;
         }
     }
 }
