@@ -74,7 +74,7 @@ namespace ProjetFinal
 
         public override string ToString()
         {
-            return this.IdMat + ";" + this.Brand + ";" + this.Model + ";" + this.State + ";" + this.Note;
+            return this.IdMat + " " + this.Brand + " " + this.Model + " " + this.State + " " + this.Note;
         }
     }
 }

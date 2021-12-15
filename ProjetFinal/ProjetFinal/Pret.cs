@@ -39,6 +39,16 @@ namespace ProjetFinal
             this.username = username;
             this.statePret = statePret;
         }
+        public Pret(int idClient, string datePret, string timePret, string returnDate, string username, string statePret)
+        {
+            this.idPret = 0;
+            this.idClient = idClient;
+            this.datePret = datePret;
+            this.timePret = timePret;
+            this.returnDate = returnDate;
+            this.username = username;
+            this.statePret = statePret;
+        }
 
         public int IdPret
         {

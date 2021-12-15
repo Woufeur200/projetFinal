@@ -107,7 +107,7 @@ namespace ProjetFinal
 
         public override string ToString()
         {
-            return this.IdClient + ";" + this.clientName + ";" + this.email + ";" + this.phone + ";" + this.poste + ";" + this.deskNumber + ";" + this.type;
+            return this.IdClient + " " + this.clientName + " " + this.email + " " + this.phone + " " + this.poste + " " + this.deskNumber + " " + this.type;
         }
     }
 }

@@ -145,9 +145,6 @@
     <Compile Include="PretAjouter.xaml.cs">
       <DependentUpon>PretAjouter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PretContent.xaml.cs">
-      <DependentUpon>PretContent.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PretPage.xaml.cs">
       <DependentUpon>PretPage.xaml</DependentUpon>
     </Compile>
@@ -205,10 +202,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PretAjouter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PretContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

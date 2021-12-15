@@ -50,7 +50,7 @@ namespace ProjetFinal
         }
 
 
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /* Login */
         public int login(string username, string password)
         {
@@ -95,9 +95,8 @@ namespace ProjetFinal
         }
 
 
-        /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /* client */
-
         public ObservableCollection<Client> getClients()
         {
             listeC.Clear();
@@ -230,13 +229,36 @@ namespace ProjetFinal
 
         }
 
+        public List<Client> rechercheClient(String client)
+        {
+            List<Client> results = new List<Client>();
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM clients WHERE phone like '%" + client + "%'";
 
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while(r.Read()){
+                    results.Add(new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetString(6)));
+                }
+                r.Close();
+                con.Close();
+
+                return results;
+            }
+            catch(MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return results;
+            }
+        }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*usager*/
-
-
-
         public ObservableCollection<Utilisateur> getUtilisateur()
         {
             listeU.Clear();
@@ -351,7 +373,13 @@ namespace ProjetFinal
 
         }
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public string getUsername()
+        {
+            return usernameLogged;
+        }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*Materiel*/
         public ObservableCollection<Materiel> getMateriels()
         {
@@ -475,7 +503,36 @@ namespace ProjetFinal
 
         }
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public List<Materiel> rechercheMateriel(String materiel)
+        {
+            List<Materiel> results = new List<Materiel>();
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM materiel WHERE brand like '%" + materiel + "%'";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    results.Add(new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+                }
+                r.Close();
+                con.Close();
+
+                return results;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return results;
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*Pret*/
         public ObservableCollection<Pret> getPrets()
         {
@@ -507,20 +564,19 @@ namespace ProjetFinal
         public int ajouterPret(Pret p, ObservableCollection<Materiel> m)
         {
             int retour = 0;
-            try
-            {
+            
 
 
                 MySqlCommand commande = new MySqlCommand("p_add_pret");
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("@idClient", p.IdClient);
-                commande.Parameters.AddWithValue("@datePret", p.DatePret);
-                commande.Parameters.AddWithValue("@timePret", p.TimePret);
-                commande.Parameters.AddWithValue("@returnDate", p.ReturnDate);
-                commande.Parameters.AddWithValue("@username", username);
-                commande.Parameters.AddWithValue("@statePret", p.StatePret);
+                commande.Parameters.AddWithValue("idClient", p.IdClient);
+                commande.Parameters.AddWithValue("datePret", p.DatePret);
+                commande.Parameters.AddWithValue("timePret", p.TimePret);
+                commande.Parameters.AddWithValue("returnDate", p.ReturnDate);
+                commande.Parameters.AddWithValue("username", usernameLogged);
+                commande.Parameters.AddWithValue("statePret", p.StatePret);
 
                 con.Open();
                 commande.Prepare();
@@ -532,14 +588,14 @@ namespace ProjetFinal
 
                 foreach(Materiel item in m)
                 {
-                    MySqlCommand commandeDP = new MySqlCommand("p_ajout_detailspret");
+                    MySqlCommand commandeDP = new MySqlCommand("p_add_detailspret");
                     commandeDP.Connection = con;
                     commandeDP.CommandType = System.Data.CommandType.StoredProcedure;
 
                     commandeDP.Parameters.AddWithValue("idPret", id);
-                    commandeDP.Parameters.AddWithValue("idMateriel", item.IdMat);
-                    commandeDP.Parameters.AddWithValue("statePret", 1);
-                    commandeDP.Parameters.AddWithValue("username", username);
+                    commandeDP.Parameters.AddWithValue("idMat", item.IdMat);
+                    commandeDP.Parameters.AddWithValue("stateDet", "Emprunté");
+                    commandeDP.Parameters.AddWithValue("username", usernameLogged);
 
                     commandeDP.ExecuteNonQuery();
                 }
@@ -549,18 +605,17 @@ namespace ProjetFinal
                 listeP.Add(p);
 
                 return retour;
-            }
-            catch(MySqlException ex)
-            {
-                retour = 0;
-                if (con.State == System.Data.ConnectionState.Open)
-                    con.Close();
-            }
-            return retour;
+            
+            
+            //catch(MySqlException ex)
+            //{
+            //    retour = 0;
+            //    if (con.State == System.Data.ConnectionState.Open)
+            //        con.Close();
+            //}
+            //return retour;
             
         }
-
-
 
         public int modifierPret(Pret p)
         {
@@ -622,7 +677,7 @@ namespace ProjetFinal
 
         }
 
-        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*Details Pret */
         public ObservableCollection<DetailsPret> getDetailsPrets()
         {
