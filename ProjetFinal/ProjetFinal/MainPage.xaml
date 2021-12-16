@@ -18,7 +18,6 @@
         <CommandBar DefaultLabelPosition="Right" Margin="0,0,0,0" Grid.Row="0">
             <AppBarButton Icon="Add" x:Name="btAdd" Label="Ajouter" Click="btAdd_Click" />
             <AppBarButton Icon="Remove" x:Name="btRemove" Label="Supprimer" Click="btRemove_Click" />
-            <AppBarButton Icon="Save" x:Name="btSave" Label="Enregistrer" Click="btSave_Click" />
             <AppBarButton Icon="ClosePane" x:Name="btLogout" Click="btLogout_Click" />
             
             <CommandBar.Content>

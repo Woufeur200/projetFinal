@@ -77,10 +77,6 @@ namespace ProjetFinal
             }
         }
 
-        private void btSave_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
