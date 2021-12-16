@@ -24,9 +24,15 @@
             <TextBox x:Name="tBox3" Margin="2" Header="Model" TextChanged="tBox3_TextChanged"/>
             <TextBlock x:Name="tBox3_Warning" Visibility="Collapsed" Foreground="Red">Le model ne peux pas être vide.</TextBlock>
 
-            <TextBox x:Name="tBox4" Margin="2" Header="état" TextChanged="tBox4_TextChanged"/>
+            <TextBlock Text="État du Matériel: "/>
+            <ComboBox x:Name="tBox4">
+                <ComboBoxItem IsSelected="True">Disponible</ComboBoxItem>
+                <ComboBoxItem>En Location</ComboBoxItem>
+                <ComboBoxItem>Défectueux</ComboBoxItem>
+                <ComboBoxItem>En Réparation</ComboBoxItem>
+            </ComboBox>
             <TextBlock x:Name="tBox4_Warning" Visibility="Collapsed" Foreground="Red">L'état du matériel ne peux pas être vide.</TextBlock>
-
+            
             <TextBox x:Name="tBox5" Margin="2" Header="Note" TextChanged="tBox5_TextChanged"/>
             
 

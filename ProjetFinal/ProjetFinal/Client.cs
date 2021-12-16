@@ -50,6 +50,16 @@ namespace ProjetFinal
             this.deskNumber = deskNumber;
             this.type = type;
         }
+        public Client(string clientName, string email, string phone, string poste,  string type)
+        {
+            this.idClient = 0;
+            this.clientName = clientName;
+            this.email = email;
+            this.phone = phone;
+            this.poste = poste;
+            this.deskNumber = 0;
+            this.type = type;
+        }
 
         public int IdClient { get => idClient; set => idClient = value; }
         public string ClientName {

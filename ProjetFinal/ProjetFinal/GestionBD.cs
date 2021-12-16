@@ -5,6 +5,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace ProjetFinal
 {
@@ -59,7 +61,7 @@ namespace ProjetFinal
             int check = 0;
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "Select * from utilisateur WHERE username = @username AND password = @password";
+            commande.CommandText = "Select * from utilisateur WHERE username = @username AND password = md5(@password)";
             commande.Parameters.AddWithValue("@username", username);
             commande.Parameters.AddWithValue("@password", password);
             con.Open();
@@ -95,6 +97,7 @@ namespace ProjetFinal
             usernameLogged = "";
             return logged;
         }
+
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -467,8 +470,6 @@ namespace ProjetFinal
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-
-                commande.Parameters.AddWithValue("idMat", m.IdMat);
                 commande.Parameters.AddWithValue("brand", m.Brand);
                 commande.Parameters.AddWithValue("model", m.Model);
                 commande.Parameters.AddWithValue("state", m.State);

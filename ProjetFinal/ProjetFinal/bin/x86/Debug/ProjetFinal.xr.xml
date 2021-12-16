@@ -67,6 +67,22 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.TextBoxExtensions">
+      <RootMethod Name="GetRegex" />
+      <RootMethod Name="SetRegex" />
+      <RootMethod Name="GetValidationMode" />
+      <RootMethod Name="SetValidationMode" />
+      <RootMethod Name="GetValidationType" />
+      <RootMethod Name="SetValidationType" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Items" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
+      <RootProperty Name="IsSelected" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="ProjetFinal.ClientContent" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />

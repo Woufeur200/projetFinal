@@ -96,7 +96,6 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.xaml
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ClientContent.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientContent.xbf
-C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjetFinal.csproj.AssemblyReference.cache
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MaterielContent.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\MaterielContent.g.i.cs
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\MaterielContent.g.cs
@@ -112,3 +111,19 @@ C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.xaml
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\PretAjouter.xbf
 C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretAjouter.xbf
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\System.Formats.Asn1.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\System.Security.AccessControl.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Formats.Asn1.SR.resw
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.AccessControl.SR.resw
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Cryptography.Pkcs.SR.resw
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Cryptography.Xml.SR.resw
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.pdb
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.pdb
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.dll
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.pdb
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\Microsoft.Toolkit.Uwp.pri.xml
+C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\obj\x86\Debug\Microsoft.Toolkit.Uwp.UI.pri.xml

@@ -5,6 +5,7 @@
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui = "using:Microsoft.Toolkit.Uwp.UI"
     mc:Ignorable="d"
     Title="Ajouter Client"
     PrimaryButtonText="Ajouter"
@@ -17,21 +18,26 @@
         <StackPanel x:Name="myStackPanel" Orientation="Vertical">
             <TextBox x:Name="tBox2" Margin="2" Header="Nom du client" TextChanged="tBox2_TextChanged"/>
             <TextBlock x:Name="tBox2_Warning" Visibility="Collapsed" Foreground="Red">Le nom du client ne peux pas être vide.</TextBlock>
-            
-            <TextBox x:Name="tBox3" Margin="2" Header="E-mail" TextChanged="tBox3_TextChanged"/>
+
+            <TextBox x:Name="tBox3" Margin="2" Header="E-mail" TextChanged="tBox3_TextChanged" ui:TextBoxExtensions.Regex="cegeptr.qc.ca$" ui:TextBoxExtensions.ValidationMode="Forced" />
             <TextBlock x:Name="tBox3_Warning" Visibility="Collapsed" Foreground="Red">L'email ne peux pas être vide.</TextBlock>
-            
-            <TextBox x:Name="tBox4" Margin="2" Header="Téléphone" TextChanged="tBox4_TextChanged"/>
+
+            <TextBox x:Name="tBox4" Margin="2" Header="Téléphone" TextChanged="tBox4_TextChanged" ui:TextBoxExtensions.ValidationType="Number" ui:TextBoxExtensions.ValidationMode="Forced"/>
             <TextBlock x:Name="tBox4_Warning" Visibility="Collapsed" Foreground="Red">Le numéro de téléphone ne peux pas être vide.</TextBlock>
 
             <TextBox x:Name="tBox5" Margin="2" Header="Poste" TextChanged="tBox5_TextChanged"/>
             <TextBlock x:Name="tBox5_Warning" Visibility="Collapsed" Foreground="Red">Le poste ne peux pas être vide.</TextBlock>
 
-            <TextBox x:Name="tBox6" Margin="2" Header="Numéro de bureau" TextChanged="tBox6_TextChanged"/>
+            <TextBox x:Name="tBox6" Margin="2" Header="Numéro de bureau" TextChanged="tBox6_TextChanged" ui:TextBoxExtensions.ValidationType="Number" ui:TextBoxExtensions.ValidationMode="Forced"/>
             <TextBlock x:Name="tBox6_Warning" Visibility="Collapsed" Foreground="Red">Le numéro de bureau ne peux pas être vide.</TextBlock>
 
-            <TextBox x:Name="tBox7" Margin="2" Header="Type de Client" TextChanged="tBox7_TextChanged"/>
-            <TextBlock x:Name="tBox7_Warning" Visibility="Collapsed" Foreground="Red">Le type de client ne peux pas être vide.</TextBlock>
+            <TextBlock Text="Type de Client: "/>
+            <ComboBox x:Name="tBox7" SelectionChanged="tBox7_SelectionChanged" >
+                <ComboBoxItem IsSelected="True">Élève</ComboBoxItem>
+                <ComboBoxItem>Professeur</ComboBoxItem>
+                <ComboBoxItem>Employé</ComboBoxItem>
+            </ComboBox>
+            
         </StackPanel>
     </Grid>
 </ContentDialog>

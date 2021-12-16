@@ -31,7 +31,7 @@ namespace ProjetFinal
             {
                 tBox5.Text = "Aucune Note";
             }
-            Materiel m = new Materiel(this.tBox1.Text, this.tBox2.Text, this.tBox3.Text, this.tBox4.Text, this.tBox5.Text);
+            Materiel m = new Materiel(this.tBox1.Text, this.tBox2.Text, this.tBox3.Text, GetSelectedComboboxText(), this.tBox5.Text);
 
             GestionBD.getInstance().ajouterMateriel(m);
         }
@@ -51,7 +51,7 @@ namespace ProjetFinal
             else
             {
                 tBox1_Warning.Visibility = Visibility.Collapsed;
-                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox4.Text != "" && tBox5.Text != "")
+                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox5.Text != "")
                 {
                     this.IsPrimaryButtonEnabled = true;
                 }
@@ -69,7 +69,7 @@ namespace ProjetFinal
             else
             {
                 tBox2_Warning.Visibility = Visibility.Collapsed;
-                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox4.Text != "" && tBox5.Text != "")
+                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "")
                 {
                     this.IsPrimaryButtonEnabled = true;
                 }
@@ -87,34 +87,23 @@ namespace ProjetFinal
             else
             {
                 tBox3_Warning.Visibility = Visibility.Collapsed;
-                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox4.Text != "" )
+                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "")
                 {
                     this.IsPrimaryButtonEnabled = true;
                 }
             }
         }
 
-        private void tBox4_TextChanged(object sender, TextChangedEventArgs e)
+        public string GetSelectedComboboxText()
         {
-            if (tBox4.Text == "")
-            {
-                tBox4_Warning.Visibility = Visibility.Visible;
-                this.IsPrimaryButtonEnabled = false;
-            }
-
-            else
-            {
-                tBox4_Warning.Visibility = Visibility.Collapsed;
-                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox4.Text != "" )
-                {
-                    this.IsPrimaryButtonEnabled = true;
-                }
-            }
+            var item = (this.tBox4.SelectedItem as ComboBoxItem);
+            return item.Content.ToString();
         }
+
 
         private void tBox5_TextChanged(object sender, TextChangedEventArgs e)
         {
-                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "" && tBox4.Text != "" )
+                if (tBox1.Text != "" && tBox2.Text != "" && tBox3.Text != "")
                 {
                     this.IsPrimaryButtonEnabled = true;
                 }

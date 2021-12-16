@@ -5,6 +5,7 @@
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui = "using:Microsoft.Toolkit.Uwp.UI"
     mc:Ignorable="d"
     Title="Ajouter Client"
     PrimaryButtonText="Ajouter"
@@ -17,21 +18,26 @@
         <StackPanel x:ConnectionId='2' x:Name="myStackPanel" Orientation="Vertical">
             <TextBox x:ConnectionId='3' x:Name="tBox2" Margin="2" Header="Nom du client"                                />
             <TextBlock x:ConnectionId='4' x:Name="tBox2_Warning" Visibility="Collapsed" Foreground="Red">Le nom du client ne peux pas être vide.</TextBlock>
-            
-            <TextBox x:ConnectionId='5' x:Name="tBox3" Margin="2" Header="E-mail"                                />
+
+            <TextBox x:ConnectionId='5' x:Name="tBox3" Margin="2" Header="E-mail"                                 ui:TextBoxExtensions.Regex="cegeptr.qc.ca$" ui:TextBoxExtensions.ValidationMode="Forced" />
             <TextBlock x:ConnectionId='6' x:Name="tBox3_Warning" Visibility="Collapsed" Foreground="Red">L'email ne peux pas être vide.</TextBlock>
-            
-            <TextBox x:ConnectionId='7' x:Name="tBox4" Margin="2" Header="Téléphone"                                />
+
+            <TextBox x:ConnectionId='7' x:Name="tBox4" Margin="2" Header="Téléphone"                                 ui:TextBoxExtensions.ValidationType="Number" ui:TextBoxExtensions.ValidationMode="Forced"/>
             <TextBlock x:ConnectionId='8' x:Name="tBox4_Warning" Visibility="Collapsed" Foreground="Red">Le numéro de téléphone ne peux pas être vide.</TextBlock>
 
             <TextBox x:ConnectionId='9' x:Name="tBox5" Margin="2" Header="Poste"                                />
             <TextBlock x:ConnectionId='10' x:Name="tBox5_Warning" Visibility="Collapsed" Foreground="Red">Le poste ne peux pas être vide.</TextBlock>
 
-            <TextBox x:ConnectionId='11' x:Name="tBox6" Margin="2" Header="Numéro de bureau"                                />
+            <TextBox x:ConnectionId='11' x:Name="tBox6" Margin="2" Header="Numéro de bureau"                                 ui:TextBoxExtensions.ValidationType="Number" ui:TextBoxExtensions.ValidationMode="Forced"/>
             <TextBlock x:ConnectionId='12' x:Name="tBox6_Warning" Visibility="Collapsed" Foreground="Red">Le numéro de bureau ne peux pas être vide.</TextBlock>
 
-            <TextBox x:ConnectionId='13' x:Name="tBox7" Margin="2" Header="Type de Client"                                />
-            <TextBlock x:ConnectionId='14' x:Name="tBox7_Warning" Visibility="Collapsed" Foreground="Red">Le type de client ne peux pas être vide.</TextBlock>
+            <TextBlock Text="Type de Client: "/>
+            <ComboBox x:ConnectionId='13' x:Name="tBox7"                                           >
+                <ComboBoxItem IsSelected="True">Élève</ComboBoxItem>
+                <ComboBoxItem>Professeur</ComboBoxItem>
+                <ComboBoxItem>Employé</ComboBoxItem>
+            </ComboBox>
+            
         </StackPanel>
     </Grid>
 </ContentDialog>

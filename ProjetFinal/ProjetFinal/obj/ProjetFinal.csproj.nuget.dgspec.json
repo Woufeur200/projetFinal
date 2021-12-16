@@ -43,6 +43,10 @@
               "target": "Package",
               "version": "[6.2.12, )"
             },
+            "Microsoft.Toolkit.Uwp.UI": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
             "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
               "target": "Package",
               "version": "[7.1.2, )"
@@ -50,6 +54,14 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.27, )"
+            },
+            "System.Security.Cryptography.Algorithms": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

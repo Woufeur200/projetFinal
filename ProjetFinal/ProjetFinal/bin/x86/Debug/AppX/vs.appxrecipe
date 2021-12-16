@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-16T02:26:43.994</Modified>
+      <Modified>2021-12-16T04:20:14.483</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
       <PackagePath>entrypoint\ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-16T02:26:43.258</Modified>
+      <Modified>2021-12-16T04:20:13.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\bouncycastle.netcore\1.8.5\lib\netstandard2.0\BouncyCastle.Crypto.dll">
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
@@ -57,6 +57,18 @@
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\k4os.hash.xxhash\1.0.6\lib\netstandard2.0\K4os.Hash.xxHash.dll">
       <PackagePath>K4os.Hash.xxHash.dll</PackagePath>
       <Modified>2019-07-03T20:39:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.toolkit\7.1.2\lib\netstandard2.0\Microsoft.Toolkit.dll">
+      <PackagePath>Microsoft.Toolkit.dll</PackagePath>
+      <Modified>2021-11-18T22:28:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.toolkit.uwp\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.dll</PackagePath>
+      <Modified>2021-11-18T22:29:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.toolkit.uwp.ui\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.dll</PackagePath>
+      <Modified>2021-11-18T22:29:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -82,13 +94,29 @@
       <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
       <Modified>2017-11-20T18:09:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.formats.asn1\6.0.0\lib\netstandard2.0\System.Formats.Asn1.dll">
+      <PackagePath>System.Formats.Asn1.dll</PackagePath>
+      <Modified>2021-10-22T23:41:58.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2020-10-19T18:46:44.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.security.accesscontrol\6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll">
+      <PackagePath>System.Security.AccessControl.dll</PackagePath>
+      <Modified>2021-10-22T23:45:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.security.cryptography.pkcs\6.0.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.Pkcs.dll">
+      <PackagePath>System.Security.Cryptography.Pkcs.dll</PackagePath>
+      <Modified>2021-10-22T23:49:54.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.security.cryptography.protecteddata\4.4.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
       <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
       <Modified>2017-07-19T10:01:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.security.cryptography.xml\6.0.0\lib\netstandard2.0\System.Security.Cryptography.Xml.dll">
+      <PackagePath>System.Security.Cryptography.Xml.dll</PackagePath>
+      <Modified>2021-10-22T23:51:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\system.security.permissions\4.7.0\lib\netstandard2.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
@@ -142,51 +170,51 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
       <PackagePath>ProjetFinal.xr.xml</PackagePath>
-      <Modified>2021-12-16T02:20:31.474</Modified>
+      <Modified>2021-12-16T04:20:13.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.771</Modified>
+      <Modified>2021-12-16T04:20:13.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientContent.xbf">
       <PackagePath>ClientContent.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.771</Modified>
+      <Modified>2021-12-16T04:20:13.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\ClientPage.xbf">
       <PackagePath>ClientPage.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.771</Modified>
+      <Modified>2021-12-16T04:20:13.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.771</Modified>
+      <Modified>2021-12-16T04:20:13.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MaterielContent.xbf">
       <PackagePath>MaterielContent.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.772</Modified>
+      <Modified>2021-12-16T04:20:13.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\MaterielPage.xbf">
       <PackagePath>MaterielPage.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.772</Modified>
+      <Modified>2021-12-16T04:20:13.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
       <PackagePath>PageConnexion.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.772</Modified>
+      <Modified>2021-12-16T04:20:13.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretAjouter.xbf">
       <PackagePath>PretAjouter.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.772</Modified>
+      <Modified>2021-12-16T04:20:13.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretPage.xbf">
       <PackagePath>PretPage.xbf</PackagePath>
-      <Modified>2021-12-16T02:26:43.150</Modified>
+      <Modified>2021-12-16T04:20:13.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\UtilisateurContent.xbf">
       <PackagePath>UtilisateurContent.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.773</Modified>
+      <Modified>2021-12-16T04:20:13.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\UtilisateurPage.xbf">
       <PackagePath>UtilisateurPage.xbf</PackagePath>
-      <Modified>2021-12-16T02:23:57.773</Modified>
+      <Modified>2021-12-16T04:20:13.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -198,11 +226,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-16T02:20:32.262</Modified>
+      <Modified>2021-12-16T03:56:54.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
       <PackagePath>ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-16T02:26:43.990</Modified>
+      <Modified>2021-12-16T04:20:14.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
