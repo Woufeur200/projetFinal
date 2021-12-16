@@ -173,26 +173,37 @@ namespace ProjetFinal
         public int modifierClient(Client c)
         {
             int retour = 0;
+            try
+            {
 
-            MySqlCommand commande = new MySqlCommand("p_modify_client");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
+                MySqlCommand commande = new MySqlCommand("p_modify_client");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            commande.Parameters.AddWithValue("idClient", c.IdClient);
-            commande.Parameters.AddWithValue("clientName", c.ClientName);
-            commande.Parameters.AddWithValue("email", c.Email);
-            commande.Parameters.AddWithValue("phone", c.Phone);
-            commande.Parameters.AddWithValue("poste", c.Poste);
-            commande.Parameters.AddWithValue("deskNumber", c.DeskNumber);
-            commande.Parameters.AddWithValue("type", c.Type);
+                commande.Parameters.AddWithValue("idClient", c.IdClient);
+                commande.Parameters.AddWithValue("clientName", c.ClientName);
+                commande.Parameters.AddWithValue("email", c.Email);
+                commande.Parameters.AddWithValue("phone", c.Phone);
+                commande.Parameters.AddWithValue("poste", c.Poste);
+                commande.Parameters.AddWithValue("deskNumber", c.DeskNumber);
+                commande.Parameters.AddWithValue("type", c.Type);
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
+                con.Open();
+                commande.Prepare();
+                retour = commande.ExecuteNonQuery();
+                con.Close();
 
-            con.Close();
 
+                return retour;
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
+
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
             return retour;
         }
 
@@ -326,7 +337,6 @@ namespace ProjetFinal
             commande.Connection = con;
             commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@username", u.Username);
             commande.Parameters.AddWithValue("@nom", u.Nom);
             commande.Parameters.AddWithValue("@prenom", u.Prenom);
             commande.Parameters.AddWithValue("@password", u.Password);
@@ -449,24 +459,34 @@ namespace ProjetFinal
         public int modifierMateriel(Materiel m)
         {
             int retour = 0;
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_modify_materiel");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            MySqlCommand commande = new MySqlCommand("p_modify_materiel");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
+                commande.Parameters.AddWithValue("idMat", m.IdMat);
+                commande.Parameters.AddWithValue("brand", m.Brand);
+                commande.Parameters.AddWithValue("model", m.Model);
+                commande.Parameters.AddWithValue("state", m.State);
+                commande.Parameters.AddWithValue("note", m.Note);
 
-            commande.Parameters.AddWithValue("@idMat", m.IdMat);
-            commande.Parameters.AddWithValue("@brand", m.Brand);
-            commande.Parameters.AddWithValue("@model", m.Model);
-            commande.Parameters.AddWithValue("@state", m.State);
-            commande.Parameters.AddWithValue("@note", m.Note);
+                con.Open();
+                commande.Prepare();
+                retour = commande.ExecuteNonQuery();
 
-            con.Open();
-            commande.Prepare();
-            retour = commande.ExecuteNonQuery();
+                con.Close();
 
-            con.Close();
+                return retour;
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
 
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
             return retour;
         }
 
@@ -564,8 +584,8 @@ namespace ProjetFinal
         public int ajouterPret(Pret p, ObservableCollection<Materiel> m)
         {
             int retour = 0;
-            
-
+            try
+            {
 
                 MySqlCommand commande = new MySqlCommand("p_add_pret");
                 commande.Connection = con;
@@ -586,7 +606,7 @@ namespace ProjetFinal
                 int id = r.GetInt32(0);
                 r.Close();
 
-                foreach(Materiel item in m)
+                foreach (Materiel item in m)
                 {
                     MySqlCommand commandeDP = new MySqlCommand("p_add_detailspret");
                     commandeDP.Connection = con;
@@ -600,20 +620,21 @@ namespace ProjetFinal
                     commandeDP.ExecuteNonQuery();
                 }
 
+
                 con.Close();
 
                 listeP.Add(p);
 
                 return retour;
-            
-            
-            //catch(MySqlException ex)
-            //{
-            //    retour = 0;
-            //    if (con.State == System.Data.ConnectionState.Open)
-            //        con.Close();
-            //}
-            //return retour;
+
+            }
+            catch(MySqlException ex)
+            {
+                retour = 0;
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+            }
+            return retour;
             
         }
 

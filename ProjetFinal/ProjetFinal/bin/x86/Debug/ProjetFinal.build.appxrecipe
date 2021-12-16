@@ -133,9 +133,6 @@
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretAjouter.xbf">
       <PackagePath>PretAjouter.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretContent.xbf">
-      <PackagePath>PretContent.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thoma\Desktop\School\ProjetFinal\ProjetFinal\ProjetFinal\bin\x86\Debug\PretPage.xbf">
       <PackagePath>PretPage.xbf</PackagePath>
     </AppxPackagedFile>

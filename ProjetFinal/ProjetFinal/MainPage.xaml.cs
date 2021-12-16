@@ -26,6 +26,7 @@ namespace ProjetFinal
         public MainPage()
         {
             this.InitializeComponent();
+            mainFrame.Navigate(typeof(PretPage));
         }
 
         private async void btAdd_Click(object sender, RoutedEventArgs e)

@@ -31,7 +31,7 @@ namespace ProjetFinal
 
         private void myTableau_CellEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridCellEditEndedEventArgs e)
         {
-
+            GestionBD.getInstance().modifierClient((Client)myTableau.SelectedItem);
         }
 
         private void myTableau_SelectionChanged(object sender, SelectionChangedEventArgs e)

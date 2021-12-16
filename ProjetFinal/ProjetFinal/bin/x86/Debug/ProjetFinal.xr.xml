@@ -31,10 +31,8 @@
       <RootProperty Name="SecondaryButtonText" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
-      <RootProperty Name="CloseButtonText" />
       <RootEvent Name="PrimaryButtonClick" />
       <RootEvent Name="SecondaryButtonClick" />
-      <RootEvent Name="CloseButtonClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Children" />
@@ -140,7 +138,6 @@
       <RootEvent Name="Toggled" />
     </RootType>
     <RootType FullName="ProjetFinal.PretAjouter" />
-    <RootType FullName="ProjetFinal.PretContent" />
     <RootType FullName="ProjetFinal.PretPage" />
     <RootType FullName="ProjetFinal.UtilisateurContent" />
     <RootType FullName="ProjetFinal.UtilisateurPage" />
