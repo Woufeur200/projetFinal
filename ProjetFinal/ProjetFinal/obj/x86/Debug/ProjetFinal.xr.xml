@@ -13,15 +13,18 @@
     <RootPropertyPathName Name="Model" />
     <RootPropertyPathName Name="Brand" />
     <RootPropertyPathName Name="IdMat" />
+    <RootPropertyPathName Name="NomUtilisateur" />
     <RootPropertyPathName Name="StatePret" />
-    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="NbrMaterielRetourne" />
+    <RootPropertyPathName Name="NbrMaterielEnCours" />
+    <RootPropertyPathName Name="NbrMateriel" />
     <RootPropertyPathName Name="ReturnDate" />
-    <RootPropertyPathName Name="TimePret" />
     <RootPropertyPathName Name="DatePret" />
     <RootPropertyPathName Name="IdPret" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Prenom" />
     <RootPropertyPathName Name="Nom" />
+    <RootPropertyPathName Name="Username" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

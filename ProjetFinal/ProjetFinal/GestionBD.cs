@@ -17,6 +17,7 @@ namespace ProjetFinal
         ObservableCollection<Materiel> listeM = new ObservableCollection<Materiel>();
         ObservableCollection<Pret> listeP = new ObservableCollection<Pret>();
         ObservableCollection<DetailsPret> listeDP = new ObservableCollection<DetailsPret>();
+        ObservableCollection<DetailsPretVue> listeDPV = new ObservableCollection<DetailsPretVue>();
 
 
         Object objectSelected;
@@ -31,6 +32,7 @@ namespace ProjetFinal
         {
             //this.con = new MySqlConnection("Server = cours.cegep3r.info; Database = a2021_420326ri_equipe_03; Uid = 2076261; Pwd = 2076261;");
             this.con = new MySqlConnection("Server = localhost; Database = prog; Uid = root; Pwd = root;");
+
         }
 
         public static GestionBD getInstance()
@@ -337,9 +339,9 @@ namespace ProjetFinal
             commande.Connection = con;
             commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@nom", u.Nom);
-            commande.Parameters.AddWithValue("@prenom", u.Prenom);
-            commande.Parameters.AddWithValue("@password", u.Password);
+            commande.Parameters.AddWithValue("nom", u.Nom);
+            commande.Parameters.AddWithValue("prenom", u.Prenom);
+            commande.Parameters.AddWithValue("password", u.Password);
 
             con.Open();
             commande.Prepare();
@@ -576,9 +578,37 @@ namespace ProjetFinal
             return listeP;
         }
 
+        public ObservableCollection<DetailsPretVue> getPretsVue()
+        {
+            listeDPV.Clear();
+
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "Select * from detailsPretVue";
+
+            con.Open();
+            MySqlDataReader r = commande.ExecuteReader();
+
+            while (r.Read())
+            {
+
+                listeDPV.Add(new DetailsPretVue(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetInt32(4), r.GetInt32(5), r.GetInt32(6),r.GetString(7),r.GetString(8)));
+            }
+            r.Close();
+            con.Close();
+
+            return listeDPV;
+        }
+
+
         public ObservableCollection<Pret> getListePrets()
         {
             return listeP;
+        }
+
+        public ObservableCollection<DetailsPretVue> getListePretsVue()
+        {
+            return listeDPV;
         }
 
         public int ajouterPret(Pret p, ObservableCollection<Materiel> m)
@@ -671,9 +701,9 @@ namespace ProjetFinal
 
             try
             {
-                MySqlCommand commande = new MySqlCommand();
+                MySqlCommand commande = new MySqlCommand("p_delete_pret");
                 commande.Connection = con;
-                commande.CommandText = "delete from pret where idPret = @idPret";
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
                 commande.Parameters.AddWithValue("@idPret", p.IdPret);
 
@@ -723,6 +753,11 @@ namespace ProjetFinal
         }
 
         public ObservableCollection<DetailsPret> getListeDetailsPret()
+        {
+            return listeDP;
+        }
+
+        public ObservableCollection<DetailsPret> getListePret()
         {
             return listeDP;
         }

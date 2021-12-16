@@ -127,6 +127,7 @@
       <DependentUpon>ClientPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="DetailsPret.cs" />
+    <Compile Include="DetailsPretVue.cs" />
     <Compile Include="GestionBD.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

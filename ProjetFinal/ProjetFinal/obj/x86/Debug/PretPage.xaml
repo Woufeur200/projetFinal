@@ -17,29 +17,37 @@
                     Binding="{Binding IdPret}"
                     Width="100"/>
                 <controls:DataGridTextColumn
-                    Header="ID Client"
-                    Binding="{Binding IdClient}"
-                    Width="100"/>
+                    Header="Nom Client"
+                    Binding="{Binding ClientName}"
+                    Width="200"/>
                 <controls:DataGridTextColumn
                     Header="Date Pret"
                     Binding="{Binding DatePret}"
                     Width="200"/>
                 <controls:DataGridTextColumn
-                    Header="Heure"
-                    Binding="{Binding TimePret}"
-                    Width="200"/>
-                <controls:DataGridTextColumn
-                    Header="returnDate"
+                    Header="Date Retour"
                     Binding="{Binding ReturnDate}"
                     Width="200"/>
                 <controls:DataGridTextColumn
-                    Header="ID Utilisateur"
-                    Binding="{Binding Username}"
-                    Width="120"/>
-                <controls:DataGridTextColumn
-                    Header="État du Pret"
-                    Binding="{Binding StatePret}"
+                    Header="Nombre de Matériels"
+                    Binding="{Binding NbrMateriel}"
                     Width="200"/>
+                <controls:DataGridTextColumn
+                   Header="Nombre de Matériels en Prêt" 
+                    Binding="{Binding NbrMaterielEnCours}"
+                    Width="200"/>
+                <controls:DataGridTextColumn
+                    Header="Nombre de Matériels Retournés" 
+                    Binding="{Binding NbrMaterielRetourne}"
+                    Width="220"/>
+                <controls:DataGridTextColumn
+                    Header="État du prêt:" 
+                    Binding="{Binding StatePret}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn
+                    Header="Prêt fait par:" 
+                    Binding="{Binding NomUtilisateur}"
+                    Width="Auto"/>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

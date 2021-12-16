@@ -26,6 +26,7 @@ namespace ProjetFinal
         public MainPage()
         {
             this.InitializeComponent();
+            btRemove.Visibility = Visibility.Collapsed;
             mainFrame.Navigate(typeof(PretPage));
         }
 
@@ -71,7 +72,8 @@ namespace ProjetFinal
             }
             else if (whatFrame.Equals("P"))
             {
-                //eatdick
+                Pret p = (Pret)GestionBD.getInstance().ObjectSelected;
+                GestionBD.getInstance().deletePret(p);
             }
         }
 
@@ -92,24 +94,29 @@ namespace ProjetFinal
         private void btClient_Click(object sender, RoutedEventArgs e)
         {
             whatFrame = "C";
+            btRemove.Visibility = Visibility.Visible;
             mainFrame.Navigate(typeof(ClientPage));
         }
 
         private void btMateriel_Click(object sender, RoutedEventArgs e)
         {
             whatFrame = "M";
+            btRemove.Visibility = Visibility.Visible;
             mainFrame.Navigate(typeof(MaterielPage));
         }
 
         private void btPret_Click(object sender, RoutedEventArgs e)
         {
             whatFrame = "P";
+            btRemove.Visibility = Visibility.Collapsed;
             mainFrame.Navigate(typeof(PretPage));
         }
 
         private void btUtilisateur_Click(object sender, RoutedEventArgs e)
         {
             whatFrame = "U";
+            btRemove.Visibility = Visibility.Visible;
+
             mainFrame.Navigate(typeof(UtilisateurPage));
         }
 
